@@ -6,14 +6,14 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 
-export type ImageItem= {
+export type ImageItem = {
   src: string;
   responsive: string;
   thumb: string;
   subHtml: string;
 }
 export default function Home() {
-  
+
 
   const dynamicEl: ImageItem[] = [
     {
@@ -91,7 +91,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <div>
       <Hero />
       <Clients />
       <About />
@@ -99,6 +99,7 @@ export default function Home() {
       <Services />
       <Gallery dynamicEl={dynamicEl} />
       <Contact />
-    </>
+
+    </div>
   );
 }

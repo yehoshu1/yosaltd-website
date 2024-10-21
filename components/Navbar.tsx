@@ -11,7 +11,7 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ href, children, onClick }: NavLinkProps) => (
-  <Link href={href} className="mx-2 text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-semibold" onClick={onClick}>
+  <Link href={href} className="mx-2 text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-semibold text-sm" onClick={onClick}>
     {children}
   </Link>
 );
