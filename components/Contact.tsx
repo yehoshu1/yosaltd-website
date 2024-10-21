@@ -10,7 +10,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-5">
 
-          <div className="flex flex-wrap w-[60%] -mx-4">
+          <div className="flex flex-wrap md:w-[60%] -mx-4">
             <div className="w-full px-4">
               <div className="bg-white shadow-2xl border border-blue-600 rounded-lg overflow-hidden">
                 <div className="flex flex-wrap">
