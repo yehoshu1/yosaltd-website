@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Button } from './ui/button';
 
 const About = () => {
@@ -13,7 +12,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-1/2">
             <p className="text-gray-700 mb-4">
-              Yosa Ltd provides a wide range of products and services that cater to businesses' diverse
+              Yosa Ltd provides a wide range of products and services that cater to businesses&apos; diverse
               needs, including:
             </p>
             <ul className="space-y-2">

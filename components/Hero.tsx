@@ -10,7 +10,7 @@ const Hero = () => {
                     Welcome to Yosa Limited
                 </h1>
                 
-                <p className='font-semibold text-lg'>"Your Partner For Success"</p> 
+                <p className='font-semibold text-lg'>&quot;Your Partner For Success&quot;</p> 
                 <p className="text-lg text-gray-700 leading-relaxed">
                     Yosa Ltd offers cutting-edge supply and ICT solutions for modern businesses, providing
                     agricultural inputs, solar system installations, Local Area Networks (LAN), Wide Area Networks
