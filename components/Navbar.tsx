@@ -5,12 +5,13 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 
 type NavLinkProps = {
-    href: string;
-    children: React.ReactNode;
+  href: string;
+  children: React.ReactNode;
+  onClick?: () => void;
 };
 
-const NavLink = ({ href, children }: NavLinkProps ) => (
-  <Link href={href} className="mx-2 text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-semibold">
+const NavLink = ({ href, children, onClick }: NavLinkProps) => (
+  <Link href={href} className="mx-2 text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 font-semibold" onClick={onClick}>
     {children}
   </Link>
 );
@@ -18,12 +19,22 @@ const NavLink = ({ href, children }: NavLinkProps ) => (
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/#services", label: "Services" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/portfolio", label: "Portfolio" },
+  ];
+
   return (
     <>
       {/* Desktop Navbar */}
       <nav className="sticky top-0 z-40 hidden w-full bg-white border-b md:flex border-b-gray-400/50 dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
         <Link href="/" className="flex flex-row mx-3">
-          <Image src="/logo.png" width={40} height={40} alt="Logo" className="block dark:hidden m-2" priority={true}/>
+          <Image src="/logo.svg" width={40} height={40} alt="Logo" className="block dark:hidden m-2" priority={true} />
           <Image src="/logo_dark.svg" width={80} height={80} alt="Logo" className="hidden dark:block p-3" />
           <div className="flex flex-row justify-center items-center">
             <p className="text-xl font-bold text-gray-800 dark:text-white">
@@ -32,24 +43,29 @@ export default function Navbar() {
           </div>
         </Link>
         <div className="flex justify-end flex-grow mx-2 items-center">
-          <NavLink href="/#whyus">Home</NavLink>
-          <NavLink href="/#service">About Us</NavLink>
-          <NavLink href="/about">Services</NavLink>
-          <NavLink href="/about">Gallerly</NavLink>
-          <NavLink href="/about">Portfolio</NavLink>
-          <Button className='mx-3'><Link href="/#contact"> Contact Us</Link></Button>
+          {navItems.map((item) => (
+            <NavLink key={item.href} href={item.href}>{item.label}</NavLink>
+          ))}
+          <Button className='mx-3'><Link href="/#contact">Contact Us</Link></Button>
         </div>
       </nav>
 
       {/* Mobile Navbar */}
       <nav className="sticky top-0 z-50 flex flex-row w-full bg-white shadow-md md:hidden dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
-        <div className="z-20 flex flex-grow">
-          <Image src="/logo_dark.svg" width={80} height={80} alt="Logo" className="hidden mx-3 dark:block" />
-          <Image src="/logo.svg" width={80} height={80} alt="Logo" className="block mx-3 dark:hidden" />
+        <div className='flex-grow'>
+          <Link href="/" className="flex flex-row mx-3">
+            <Image src="/logo.svg" width={40} height={40} alt="Logo" className="block dark:hidden m-2" priority={true} />
+            <Image src="/logo_dark.svg" width={80} height={80} alt="Logo" className="hidden dark:block p-3" />
+            <div className="flex flex-row justify-center items-center">
+              <p className="text-xl font-bold text-gray-800 dark:text-white">
+                Yosa Limited
+              </p>
+            </div>
+          </Link>
         </div>
         <div className="z-20 flex justify-center mr-3 items-center">
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             className="h-7 w-7"
             aria-label="Toggle Menu"
           >
@@ -71,11 +87,11 @@ export default function Navbar() {
           </button>
         </div>
         {isOpen && (
-          <div className="fixed z-10 flex flex-col justify-start w-full h-screen mx-2 bg-white dark:bg-gray-900 dark:backdrop-blur-sm pt-28 dark:bg-opacity-95 bg-opacity-85 backdrop-blur-xl items-center">
-            <NavLink href="/#whyus">Why Us</NavLink>
-            <NavLink href="/#service">Services</NavLink>
-            <NavLink href="/about">About Us</NavLink>
-            <NavLink href="/#contact">Contact Us</NavLink>
+          <div className="fixed -z-10 flex flex-col justify-start w-full h-screen mx-2 bg-white dark:bg-gray-900 dark:backdrop-blur-sm pt-28 dark:bg-opacity-95 bg-opacity-85 backdrop-blur-xl items-center">
+            {navItems.map((item) => (
+              <NavLink key={item.href} href={item.href} onClick={toggleMenu}>{item.label}</NavLink>
+            ))}
+            <Button className='mt-4'><Link href="/#contact" onClick={toggleMenu}>Contact Us</Link></Button>
           </div>
         )}
       </nav>

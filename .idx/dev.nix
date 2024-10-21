@@ -6,7 +6,7 @@
     pkgs.fish
   ];
   idx.extensions = [
-    
+        
   ];
   idx.previews = {
     previews = {
