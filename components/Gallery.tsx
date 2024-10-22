@@ -19,7 +19,8 @@ interface ImageItem {
   src: string;
   responsive: string;
   thumb: string;
-  alt: string;
+  alt:string;
+  subHtml: string;
 }
 
 interface ImagesLoadedState {
@@ -63,7 +64,7 @@ export default function Gallery({dynamicEl}: GalleryProps): JSX.Element {
               <div className="absolute inset-0 bg-gray-200 animate-pulse" />
             )}
             <Image
-              alt={image.alt}
+              alt={`${image.alt}`}
               src={image.thumb}
               layout="fill"
               objectFit="contain"
