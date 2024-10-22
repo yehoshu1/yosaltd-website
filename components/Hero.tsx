@@ -6,14 +6,14 @@ const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-8 py-16 px-4 md:px-16">
       <div className="flex flex-col gap-4 md:w-[50%]">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-blue-800">
           Welcome to Yosa Limited
         </h1>
 
-        <p className="font-semibold text-lg">
+        <p className="font-semibold italic text-lg text-blue-400">
           &quot;Your Partner For Success&quot;
         </p>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-lg font-medium leading-relaxed">
           Yosa Ltd offers cutting-edge supply and ICT solutions for modern
           businesses, providing agricultural inputs, solar system installations,
           Local Area Networks (LAN), Wide Area Networks (WAN), VSAT, Fibre

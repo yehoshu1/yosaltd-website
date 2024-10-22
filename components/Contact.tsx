@@ -17,9 +17,9 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row gap-5">
           <div className="flex flex-wrap md:w-[60%] -mx-4">
             <div className="w-full px-4">
-              <div className="bg-white shadow-2xl border border-blue-600 rounded-lg overflow-hidden">
+              <div className="bg-white shadow-2xl border border-blue-900/25 rounded-lg overflow-hidden">
                 <div className="flex flex-wrap">
-                  <div className="w-full md:w-1/3 p-6 border-b md:border-b-0 md:border-r border-blue-600">
+                  <div className="w-full md:w-1/3 p-6 border-b md:border-b-0 md:border-r border-blue-900/25">
                     <div className="flex items-center mb-4">
                       <i className="bi bi-geo-alt text-2xl text-blue-600 mr-3"></i>
                       <h4 className="text-lg font-semibold">Location:</h4>
@@ -32,7 +32,7 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <div className="w-full md:w-1/3 p-6 border-b md:border-b-0 md:border-r border-blue-600">
+                  <div className="w-full md:w-1/3 p-6 border-b md:border-b-0 md:border-r border-blue-900/25">
                     <div className="flex items-center mb-4">
                       <i className="bi bi-envelope text-2xl text-blue-600 mr-3"></i>
                       <h4 className="text-lg font-semibold">Email:</h4>

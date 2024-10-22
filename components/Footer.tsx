@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-600">
+    <footer className="bg-[#2C363F] text-white">
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -12,7 +12,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/"
-                  className="hover:text-gray-900"
+                  className="hover:text-gray-400"
                 >
                   Home
                 </Link>
@@ -20,7 +20,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-gray-900"
+                  className="hover:text-gray-400"
                 >
                   About us
                 </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/#services"
-                  className="hover:text-gray-900"
+                  className="hover:text-gray-400"
                 >
                   Services
                 </Link>
@@ -36,7 +36,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/portfolio"
-                  className="hover:text-gray-900"
+                  className="hover:text-gray-400"
                 >
                   Portfolio
                 </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/gallery"
-                  className="hover:text-gray-900"
+                  className="hover:text-gray-400"
                 >
                   Gallery
                 </Link>
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-gray-200 py-4">
+      <div className="bg-[#2b3946] py-4">
         <div className="container mx-auto px-4 text-center">
           <p>
             &copy; Copyright <strong>Yosa Limited</strong>.{" "}

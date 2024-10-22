@@ -47,7 +47,7 @@ export function ContactForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-3 p-10 border border-blue-600 rounded-md"
+            className="space-y-3 p-10 border border-blue-900/25 shadow-2xl rounded-md"
           >
             <h1 className="text-xl font-semibold my-2 ">Send us and Inquiry</h1>
             <FormField

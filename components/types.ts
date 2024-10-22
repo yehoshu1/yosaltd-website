@@ -10,6 +10,6 @@ export interface CarImage {
 export interface DynamicGalleryItem {
   src: string;
   thumb: string;
-  subHtml: string;
+  alt: string;
   responsive: string;
 }
