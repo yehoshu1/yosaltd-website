@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PortfolioItem {
   title: string;
@@ -10,12 +10,17 @@ interface PortfolioItemProps {
   items: string[];
 }
 
-const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, items }) => (
+const PortfolioItem: React.FC<PortfolioItemProps> = ({title, items}) => (
   <div className="w-full md:w-1/2 mb-8 px-4">
     <h3 className="text-xl font-semibold mb-4">{title}</h3>
     <ul className="list-disc list-outside pl-5 space-y-2">
       {items.map((item, index) => (
-        <li key={index} className="pl-1">{item}</li>
+        <li
+          key={index}
+          className="pl-1"
+        >
+          {item}
+        </li>
       ))}
     </ul>
   </div>
@@ -25,27 +30,30 @@ const Portfolio: React.FC = () => {
   const portfolioData: PortfolioItem[] = [
     {
       title: "Supply of Laptops",
-      items: ["The Malawi Revenue Authority(MRA)"]
+      items: ["The Malawi Revenue Authority(MRA)"],
     },
     {
       title: "Supply of Network Switches",
-      items: ["The Malawi Revenue Authority(MRA)"]
+      items: ["The Malawi Revenue Authority(MRA)"],
     },
     {
       title: "Supply of Fertiliser",
-      items: ["Smallholder Farmers Fertilizer Revolving Fund of Malawi"]
+      items: ["Smallholder Farmers Fertilizer Revolving Fund of Malawi"],
     },
     {
       title: "Supply of Livestock",
-      items: ["The Ministry of Agriculture"]
+      items: ["The Ministry of Agriculture"],
     },
     {
       title: "Supply, Installation and Servicing of air conditioners",
-      items: ["Zomba Central Hospital", "Immigration Head Offices"]
+      items: ["Zomba Central Hospital", "Immigration Head Offices"],
     },
     {
       title: "VOIP Installations",
-      items: ["Chibuku brewery offices", "Seedco Blantyre and Lilongwe offices"]
+      items: [
+        "Chibuku brewery offices",
+        "Seedco Blantyre and Lilongwe offices",
+      ],
     },
     {
       title: "VSAT Installations",
@@ -56,17 +64,18 @@ const Portfolio: React.FC = () => {
         "John Hopkins in Blantyre",
         "Fargo Mzimba office",
         "Mota Engil Malawi (Livingstonia, Zalewa, Liwonde and Mangochi)",
-        "African Parks of Malawi (Majete)"
-      ]
+        "African Parks of Malawi (Majete)",
+      ],
     },
     {
-      title: "PABX and Telephone Voice Logging and Recording Systems installations",
+      title:
+        "PABX and Telephone Voice Logging and Recording Systems installations",
       items: [
         "Lab Enterprises",
         "Elvis Freight",
         "Dimakis 2013 Limited Chigumula",
-        "Audit Consult"
-      ]
+        "Audit Consult",
+      ],
     },
     {
       title: "Total IT Support",
@@ -77,8 +86,8 @@ const Portfolio: React.FC = () => {
         "CCAP Blantyre Synod",
         "Dimakis 2013 Limited",
         "Immigration Headquarters",
-        "Lab enterprises"
-      ]
+        "Lab enterprises",
+      ],
     },
     {
       title: "Supply of Network Cables",
@@ -86,8 +95,8 @@ const Portfolio: React.FC = () => {
         "Globe Internet Limited",
         "I.T Center (C3 Limited)",
         "AFCOR Solutions",
-        "Computech"
-      ]
+        "Computech",
+      ],
     },
     {
       title: "Local Area Network and Wide Area Network Installation",
@@ -111,8 +120,8 @@ const Portfolio: React.FC = () => {
         "CSL Panel Beaters.",
         "Delamere Properties.",
         "Mota Engil Malawi",
-        "Royal Consultants"
-      ]
+        "Royal Consultants",
+      ],
     },
     {
       title: "Supply of CCTV Surveillance Systems",
@@ -123,9 +132,9 @@ const Portfolio: React.FC = () => {
         "Lab Enterprises",
         "Child Justice Court (Funded by UNICEF)",
         "Gold Card Executive Lodge",
-        "Ndirande Executive Lodge"
-      ]
-    }
+        "Ndirande Executive Lodge",
+      ],
+    },
   ];
 
   return (
@@ -135,7 +144,11 @@ const Portfolio: React.FC = () => {
       </div>
       <div className="flex flex-wrap mx-10 md:mx-20">
         {portfolioData.map((item, index) => (
-          <PortfolioItem key={index} title={item.title} items={item.items} />
+          <PortfolioItem
+            key={index}
+            title={item.title}
+            items={item.items}
+          />
         ))}
       </div>
     </div>

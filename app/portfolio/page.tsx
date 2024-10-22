@@ -1,10 +1,8 @@
-import Portfolio from '@/components/Portfolio'
-import React from 'react'
+import Portfolio from "@/components/Portfolio";
+import React from "react";
 
 const page = () => {
-  return (
-    <Portfolio/>
-  )
-}
+  return <Portfolio />;
+};
 
-export default page
+export default page;

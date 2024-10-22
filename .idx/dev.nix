@@ -8,6 +8,11 @@
   idx.extensions = [
     "dbaeumer.vscode-eslint"
     "dsznajder.es7-react-js-snippets"
+    "alfredbirk.tailwind-documentation"
+    "bradlc.vscode-tailwindcss"
+    "formulahendry.auto-close-tag"
+    "formulahendry.auto-complete-tag"
+    "formulahendry.auto-rename-tag"
   ];
   idx.previews = {
     previews = {

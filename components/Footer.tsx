@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,11 +9,46 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Useful Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
-              <li><Link href="/about" className="hover:text-gray-900">About us</Link></li>
-              <li><Link href="/#services" className="hover:text-gray-900">Services</Link></li>
-              <li><Link href="/portfolio" className="hover:text-gray-900">Portfolio</Link></li>
-              <li><Link href="/gallery" className="hover:text-gray-900">Gallery</Link></li>
+              <li>
+                <Link
+                  href="/"
+                  className="hover:text-gray-900"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-gray-900"
+                >
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#services"
+                  className="hover:text-gray-900"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/portfolio"
+                  className="hover:text-gray-900"
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gallery"
+                  className="hover:text-gray-900"
+                >
+                  Gallery
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -26,8 +61,12 @@ const Footer = () => {
               <span className="block">Blantyre</span>
               <span className="block">Malawi</span>
               <span className="block font-semibold">P.O BOX 830, Blantyre</span>
-              <span className="block"><strong>Phone:</strong> +265 212 344 565</span>
-              <span className="block"><strong>Email:</strong> info@yosaltd.com</span>
+              <span className="block">
+                <strong>Phone:</strong> +265 212 344 565
+              </span>
+              <span className="block">
+                <strong>Email:</strong> info@yosaltd.com
+              </span>
             </p>
           </div>
 
@@ -40,8 +79,12 @@ const Footer = () => {
               <span className="block">Lilongwe</span>
               <span className="block">Malawi</span>
               <span className="block font-semibold">P.O Box X24, Lilongwe</span>
-              <span className="block"><strong>Phone:</strong> +265 211 344 566</span>
-              <span className="block"><strong>Email:</strong> info@yosaltd.com</span>
+              <span className="block">
+                <strong>Phone:</strong> +265 211 344 566
+              </span>
+              <span className="block">
+                <strong>Email:</strong> info@yosaltd.com
+              </span>
             </p>
           </div>
         </div>
@@ -49,7 +92,10 @@ const Footer = () => {
 
       <div className="bg-gray-200 py-4">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; Copyright <strong>Yosa Limited</strong>. {new Date().getFullYear()}</p>
+          <p>
+            &copy; Copyright <strong>Yosa Limited</strong>.{" "}
+            {new Date().getFullYear()}
+          </p>
         </div>
       </div>
     </footer>
