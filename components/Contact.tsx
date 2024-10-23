@@ -64,6 +64,7 @@ const Contact = () => {
 
                 <div className="w-full h-72">
                   <iframe
+                    title="Yosa Limited Location"
                     src="https://maps.google.com/maps?q=Yosa Limited&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     className="w-full h-full"
                     frameBorder="0"
