@@ -90,7 +90,7 @@ const ImageGallery: React.FC<GalleryProps> = ({
             key={index}
             href={image.src}
             className="group block w-full aspect-square relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            data-sub-html={image.subHtml}
+            
           >
             <div className="relative w-full h-full">
               <Image
