@@ -15,7 +15,7 @@ export type ImageItem = {
   subHtml: string;
 };
 export default function Home() {
-  const dynamicEl: ImageItem[] = [
+  const images: ImageItem[] = [
     {
       src: "/img/cctv/3.png",
       responsive: "/img/cctv/3.png",
@@ -110,7 +110,7 @@ export default function Home() {
       <WhyUs />
       <Services />
       <MyCarousel />
-      <Gallery dynamicEl={dynamicEl} />
+      <Gallery images={images} />
       <Contact />
     </div>
   );

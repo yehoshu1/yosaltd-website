@@ -28,10 +28,10 @@ interface ImagesLoadedState {
 }
 
 type GalleryProps = {
-  dynamicEl: ImageItem[];
+  images: ImageItem[];
 };
 
-export default function Gallery({dynamicEl}: GalleryProps): JSX.Element {
+export default function Gallery({images}: GalleryProps): JSX.Element {
   const [imagesLoaded, setImagesLoaded] = useState<ImagesLoadedState>({});
 
   const onInit = (): void => {
@@ -54,7 +54,7 @@ export default function Gallery({dynamicEl}: GalleryProps): JSX.Element {
         plugins={[lgThumbnail, lgZoom]}
         elementClassNames="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
-        {dynamicEl.map((image: ImageItem, index: number) => (
+        {images.map((image: ImageItem, index: number) => (
           <a
             href={image.src}
             key={index}

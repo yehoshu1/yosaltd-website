@@ -3,7 +3,7 @@ import React from "react";
 import {ImageItem} from "../page";
 
 const page = () => {
-  const dynamicEl: ImageItem[] = [
+  const images: ImageItem[] = [
     {
       src: "/img/cctv/3.png",
       responsive: "/img/cctv/3.png",
@@ -90,7 +90,7 @@ const page = () => {
     },
   ];
 
-  return <Gallery dynamicEl={dynamicEl} />;
+  return <Gallery images={images} />;
 };
 
 export default page;
