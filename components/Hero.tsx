@@ -11,7 +11,7 @@ const Hero = () => {
             Welcome to Yosa Limited
           </h1>
 
-          <p className="font-semibold italic text-lg text-blue-400">
+          <p className="font-semibold italic text-lg text-blue-600">
             &quot;Your Partner For Success&quot;
           </p>
           <p className="text-lg font-medium leading-relaxed">

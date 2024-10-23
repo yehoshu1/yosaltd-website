@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import BackToTop from "@/components/BackToTop";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import Gallery from "@/components/Gallery";
@@ -112,6 +113,7 @@ export default function Home() {
       <MyCarousel />
       <Gallery images={images} />
       <Contact />
+      <BackToTop/>
     </div>
   );
 }
