@@ -1,81 +1,125 @@
-"use client";
+'use client';
 
-import React, {useState} from "react";
-import dynamic from "next/dynamic";
-import Image from "next/image";
+import React, { Suspense, useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
-const LightGallery = dynamic(() => import("lightgallery/react"), {
+// Dynamically import LightGallery with no SSR but preload it
+const LightGallery = dynamic(() => import('lightgallery/react'), {
   ssr: false,
+  loading: () => null
 });
 
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css";
+// Styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
 
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
+// Plugins
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
 
+// Types
 interface ImageItem {
   src: string;
   responsive: string;
   thumb: string;
-  alt:string;
+  alt: string;
   subHtml: string;
 }
 
-interface ImagesLoadedState {
-  [key: number]: boolean;
+interface GalleryProps {
+  images: ImageItem[];
+  title?: string;
+  description?: string;
 }
 
-type GalleryProps = {
-  images: ImageItem[];
-};
+const ImageGallery: React.FC<GalleryProps> = ({
+  images,
+  title = 'Gallery',
+  description = 'Explore our diverse tech portfolio'
+}) => {
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+  const [isGalleryReady, setIsGalleryReady] = useState(false);
 
-export default function Gallery({images}: GalleryProps): JSX.Element {
-  const [imagesLoaded, setImagesLoaded] = useState<ImagesLoadedState>({});
+  // Check if all images are loaded
+  useEffect(() => {
+    if (loadedImages.size === images.length) {
+      setIsGalleryReady(true);
+    }
+  }, [loadedImages, images.length]);
 
-  const onInit = (): void => {
-    console.log("lightGallery has been initialized");
-  };
+  // Preload all images
+  useEffect(() => {
+    images.forEach((image, index) => {
+      const img = new window.Image();
+      img.src = image.thumb;
+      img.onload = () => {
+        setLoadedImages(prev => new Set(prev).add(index));
+      };
+    });
+  }, [images]);
 
-  const handleImageLoad = (index: number): void => {
-    setImagesLoaded((prev) => ({...prev, [index]: true}));
-  };
-
-  return (
-    <div className="mx-10 md:mx-20 my-20">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl dark:text-white font-bold mb-2">Gallery</h2>
-        <p className="">Explore our diverse tech portfolio</p>
-      </div>
-      <LightGallery
-        onInit={onInit}
-        speed={500}
-        plugins={[lgThumbnail, lgZoom]}
-        elementClassNames="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-      >
-        {images.map((image: ImageItem, index: number) => (
-          <a
-            href={image.src}
-            key={index}
-            className="block w-full aspect-square relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          >
-            {!imagesLoaded[index] && (
-              <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-            )}
-            <Image
-              alt={`${image.alt}`}
-              src={image.thumb}
-              layout="fill"
-              objectFit="contain"
-              className={`transition-transform duration-300 hover:scale-110 ${
-                imagesLoaded[index] ? "opacity-100" : "opacity-0"
-              }`}
-              onLoad={() => handleImageLoad(index)}
+  const GalleryContent = () => {
+    if (!isGalleryReady) {
+      return (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className="aspect-square rounded-lg bg-gray-200 animate-pulse"
             />
+          ))}
+        </div>
+      );
+    }
+
+    return (
+      <LightGallery
+        elementClassNames="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        plugins={[lgThumbnail, lgZoom]}
+        speed={500}
+        backdropDuration={400}
+        mode="lg-fade"
+        download={false}
+        closeOnTap={true}
+        hideControlOnEnd={true}
+      >
+        {images.map((image, index) => (
+          <a
+            key={index}
+            href={image.src}
+            className="group block w-full aspect-square relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+            data-sub-html={image.subHtml}
+          >
+            <div className="relative w-full h-full">
+              <Image
+                alt={image.alt}
+                src={image.thumb}
+                fill
+                className="object-contain transition-all duration-300 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                priority={index < 4}
+              />
+            </div>
           </a>
         ))}
       </LightGallery>
+    );
+  };
+
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold mb-2 dark:text-white">{title}</h2>
+        <p className="text-gray-600 dark:text-gray-300">{description}</p>
+      </div>
+      
+      <Suspense fallback={null}>
+        <GalleryContent />
+      </Suspense>
     </div>
   );
-}
+};
+
+export default ImageGallery;
