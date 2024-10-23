@@ -1,8 +1,8 @@
 "use client";
-import { useState, useCallback, memo } from "react";
+import {useState, useCallback, memo} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import {Button} from "./ui/button";
 
 type NavLinkProps = {
   href: string;
@@ -11,7 +11,7 @@ type NavLinkProps = {
 };
 
 // Memoize NavLink component since it's used repeatedly
-const NavLink = memo(({ href, children, onClick }: NavLinkProps) => (
+const NavLink = memo(({href, children, onClick}: NavLinkProps) => (
   <Link
     href={href}
     className="mx-2 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-gray-300 font-semibold text-sm"
@@ -20,15 +20,15 @@ const NavLink = memo(({ href, children, onClick }: NavLinkProps) => (
     {children}
   </Link>
 ));
-NavLink.displayName = 'NavLink';
+NavLink.displayName = "NavLink";
 
 // Constants moved outside component to prevent recreation
 const NAV_ITEMS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/#services", label: "Services" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/portfolio", label: "Portfolio" }
+  {href: "/", label: "Home"},
+  {href: "/about", label: "About Us"},
+  {href: "/#services", label: "Services"},
+  {href: "/gallery", label: "Gallery"},
+  {href: "/portfolio", label: "Portfolio"},
 ] as const;
 
 // Memoize SVG components
@@ -46,7 +46,7 @@ const CloseIcon = memo(() => (
     />
   </svg>
 ));
-CloseIcon.displayName = 'CloseIcon';
+CloseIcon.displayName = "CloseIcon";
 
 const MenuIcon = memo(() => (
   <svg
@@ -62,11 +62,14 @@ const MenuIcon = memo(() => (
     />
   </svg>
 ));
-MenuIcon.displayName = 'MenuIcon';
+MenuIcon.displayName = "MenuIcon";
 
 // Memoize Logo component
 const Logo = memo(() => (
-  <Link href="/" className="flex flex-row mx-3">
+  <Link
+    href="/"
+    className="flex flex-row mx-3"
+  >
     <Image
       src="/logo.svg"
       width={40}
@@ -91,32 +94,36 @@ const Logo = memo(() => (
     </div>
   </Link>
 ));
-Logo.displayName = 'Logo';
+Logo.displayName = "Logo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = useCallback(() => {
-    setIsOpen(prev => !prev);
+    setIsOpen((prev) => !prev);
   }, []);
 
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="sticky top-0 z-40 hidden w-full bg-[#eef2fc] border-b md:flex border-b-black/25 dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
-        <Logo />
-        <div className="flex justify-end flex-grow mx-2 items-center">
-          {NAV_ITEMS.map((item) => (
-            <NavLink key={item.href} href={item.href}>
-              {item.label}
-            </NavLink>
-          ))}
-          <Button className="mx-3">
-            <Link href="/#contact">Contact Us</Link>
-          </Button>
-        </div>
-      </nav>
-
+        <div className="flex flex-row place-items-center justify-center bg-[#eef2fc]">
+        <nav className="2xl:container sticky top-0 z-40 hidden w-full border-b md:flex border-b-black/25 dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
+          <Logo />
+          <div className="flex justify-end flex-grow mx-2 items-center">
+            {NAV_ITEMS.map((item) => (
+              <NavLink
+                key={item.href}
+                href={item.href}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+            <Button className="mx-3">
+              <Link href="/#contact">Contact Us</Link>
+            </Button>
+          </div>
+        </nav>
+      </div>
       {/* Mobile Navbar */}
       <nav className="sticky top-0 z-50 flex flex-row w-full bg-white shadow-md md:hidden dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
         <div className="flex-grow">
@@ -143,7 +150,10 @@ export default function Navbar() {
               </NavLink>
             ))}
             <Button className="mt-4">
-              <Link href="/#contact" onClick={toggleMenu}>
+              <Link
+                href="/#contact"
+                onClick={toggleMenu}
+              >
                 Contact Us
               </Link>
             </Button>
