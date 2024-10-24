@@ -14,7 +14,7 @@ type NavLinkProps = {
 const NavLink = memo(({href, children, onClick}: NavLinkProps) => (
   <Link
     href={href}
-    className="mx-2 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-gray-300 font-semibold text-sm"
+    className="mx-2 my-5 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-gray-300 font-semibold text-sm"
     onClick={onClick}
   >
     {children}
