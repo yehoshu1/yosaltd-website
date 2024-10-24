@@ -107,9 +107,9 @@ export default function Navbar() {
     <>
       {/* Desktop Navbar */}
       <div
-        className="flex flex-row place-items-center justify-center border-b border-b-black/25 bg-[#eef2fc]"
+        className="flex sticky top-0 z-40 flex-row place-items-center justify-center border-b border-b-black/25 bg-[#eef2fc]"
       >
-        <nav className="2xl:container sticky top-0 z-40 hidden w-full border-b md:flex border-b-black/25 dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
+        <nav className="2xl:container hidden w-full border-b md:flex border-b-black/25 dark:bg-gray-900 dark:backdrop-blur-sm dark:bg-opacity-80 backdrop-blur-sm bg-opacity-90 h-15">
           <Logo />
           <div className="flex justify-end flex-grow mx-2 items-center">
             {NAV_ITEMS.map((item) => (

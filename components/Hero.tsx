@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,8 +24,12 @@ const Hero = () => {
             success.{" "}
           </p>
           <div className="flex gap-4 mt-4">
-            <Button variant="outline">Learn More</Button>
-            <Button>Contact Us</Button>
+            <Button variant="outline">
+              <Link href={"/about"}>Learn More</Link>
+            </Button>
+            <Button>
+              <Link href={"#contact"}>Contact Us</Link>
+            </Button>
           </div>
         </div>
         <div className="md:w-[50%]">
