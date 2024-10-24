@@ -12,7 +12,8 @@ const page = () => {
       responsive: "/img/Mapper_page0_image.png",
       thumb: "/img/Mapper_page0_image.png",
       alt: "Professional Mapping System",
-      description: "Advanced GPS Mapping System with Real-time Data Collection and Analysis Tools",
+      description:
+        "Advanced GPS Mapping System with Real-time Data Collection and Analysis Tools",
       price: 4999.99,
       subHtml: `...`,
     },
@@ -21,7 +22,8 @@ const page = () => {
       responsive: "/img/G60F-GNSS-SPECS-800x800.png",
       thumb: "/img/G60F-GNSS-SPECS-800x800.png",
       alt: "GNSS Receiver",
-      description: "High-Precision GNSS Receiver with RTK Support and Multi-Constellation Tracking",
+      description:
+        "High-Precision GNSS Receiver with RTK Support and Multi-Constellation Tracking",
       price: 3499.99,
       subHtml: `...`,
     },
@@ -32,7 +34,8 @@ const page = () => {
       responsive: "/img/PC/1.jpg",
       thumb: "/img/PC/1.jpg",
       alt: "Desktop Computer",
-      description: "Business Desktop PC with Intel Core i5, 16GB RAM, 512GB SSD",
+      description:
+        "Business Desktop PC with Intel Core i5, 16GB RAM, 512GB SSD",
       price: 899.99,
       subHtml: `...`,
     },
@@ -41,7 +44,8 @@ const page = () => {
       responsive: "/img/PC/8.png",
       thumb: "/img/PC/8.png",
       alt: "Gaming PC",
-      description: "High-Performance Gaming PC with RTX 3080, 32GB RAM, RGB Cooling",
+      description:
+        "High-Performance Gaming PC with RTX 3080, 32GB RAM, RGB Cooling",
       price: 2199.99,
       subHtml: `...`,
     },
@@ -50,7 +54,8 @@ const page = () => {
       responsive: "/img/PC/10.webp",
       thumb: "/img/PC/10.webp",
       alt: "Mini PC",
-      description: "Compact Mini PC with Intel i7, 16GB RAM, Perfect for Office Use",
+      description:
+        "Compact Mini PC with Intel i7, 16GB RAM, Perfect for Office Use",
       price: 799.99,
       subHtml: `...`,
     },
@@ -59,7 +64,8 @@ const page = () => {
       responsive: "/img/PC/3.jpg",
       thumb: "/img/PC/3.jpg",
       alt: "Workstation PC",
-      description: "Professional Workstation with Xeon CPU, 64GB RAM, Quadro Graphics",
+      description:
+        "Professional Workstation with Xeon CPU, 64GB RAM, Quadro Graphics",
       price: 3299.99,
       subHtml: `...`,
     },
@@ -74,7 +80,8 @@ const page = () => {
     },
     {
       src: "/img/PC/LOT7SUMIworkstations_precision_7820_gallery_2 (1).jpg",
-      responsive: "/img/PC/LOT7SUMIworkstations_precision_7820_gallery_2 (1).jpg",
+      responsive:
+        "/img/PC/LOT7SUMIworkstations_precision_7820_gallery_2 (1).jpg",
       thumb: "/img/PC/LOT7SUMIworkstations_precision_7820_gallery_2 (1).jpg",
       alt: "Dell Precision Workstation",
       description: "Dell Precision 7820 Workstation, Dual Xeon, 128GB RAM",
@@ -86,7 +93,8 @@ const page = () => {
       responsive: "/img/PC/GEN4.jpg",
       thumb: "/img/PC/GEN4.jpg",
       alt: "Gen4 Desktop",
-      description: "4th Generation Business Desktop with Enhanced Security Features",
+      description:
+        "4th Generation Business Desktop with Enhanced Security Features",
       price: 1299.99,
       subHtml: `...`,
     },
@@ -249,8 +257,10 @@ const page = () => {
     },
     {
       src: "/img/net/dellemc-per550-16x2-5-above-lf-emc-honeycomb-bezel-w-lcd.png",
-      responsive: "/img/net/dellemc-per550-16x2-5-above-lf-emc-honeycomb-bezel-w-lcd.png",
-      thumb: "/img/net/dellemc-per550-16x2-5-above-lf-emc-honeycomb-bezel-w-lcd.png",
+      responsive:
+        "/img/net/dellemc-per550-16x2-5-above-lf-emc-honeycomb-bezel-w-lcd.png",
+      thumb:
+        "/img/net/dellemc-per550-16x2-5-above-lf-emc-honeycomb-bezel-w-lcd.png",
       alt: "Dell Server",
       description: "Dell PowerEdge R550 Rack Server",
       price: 4999.99,
@@ -289,7 +299,7 @@ const page = () => {
       thumb: "/img/net/KVM1.jpg",
       alt: "KVM Switch",
       description: "8-Port KVM Switch with LCD Display",
-      price: 699.99,
+      price: "699.99",
       subHtml: `...`,
     },
     {
@@ -297,8 +307,8 @@ const page = () => {
       responsive: "/img/net/china kvm console.jpg",
       thumb: "/img/net/china kvm console.jpg",
       alt: "KVM Console",
-      description: "1U Rack Mount KVM Console with 17\" LCD",
-      price: 899.99,
+      description: '1U Rack Mount KVM Console with 17" LCD',
+      price: "899.99",
       subHtml: `...`,
     },
 
@@ -309,7 +319,7 @@ const page = () => {
       thumb: "/img/air/1.webp",
       alt: "Split AC",
       description: "18,000 BTU Split Air Conditioner",
-      price: 1499.99,
+      price: "1499.99",
       subHtml: `...`,
     },
     {
@@ -318,7 +328,7 @@ const page = () => {
       thumb: "/img/air/2.jpg",
       alt: "Commercial AC",
       description: "24,000 BTU Commercial Grade AC System",
-      price: 2999.99,
+      price: "2999.99",
       subHtml: `...`,
     },
 
@@ -329,7 +339,7 @@ const page = () => {
       thumb: "/img/bio/1.webp",
       alt: "Biometric Scanner",
       description: "Multi-Modal Biometric Access Control System",
-      price: 599.99,
+      price: "599.99",
       subHtml: `...`,
     },
     {
@@ -337,8 +347,9 @@ const page = () => {
       responsive: "/img/bio/3.jpg",
       thumb: "/img/bio/3.jpg",
       alt: "Face Recognition System",
-      description: "Advanced Facial Recognition Terminal with Temperature Screening",
-      price: 799.99,
+      description:
+        "Advanced Facial Recognition Terminal with Temperature Screening",
+      price: "799.99",
       subHtml: `...`,
     },
 
@@ -349,7 +360,7 @@ const page = () => {
       thumb: "/img/UPS/1.jpg",
       alt: "Line Interactive UPS",
       description: "1500VA Line Interactive UPS with LCD Display",
-      price: 399.99,
+      price: "399.99",
       subHtml: `...`,
     },
     {
@@ -358,7 +369,7 @@ const page = () => {
       thumb: "/img/UPS/3.jpg",
       alt: "Online UPS",
       description: "3000VA Online Double Conversion UPS",
-      price: 899.99,
+      price: "899.99",
       subHtml: `...`,
     },
     {
@@ -367,7 +378,7 @@ const page = () => {
       thumb: "/img/UPS/4.jpg",
       alt: "Rack Mount UPS",
       description: "2200VA Rack-Mountable UPS with Network Card",
-      price: 1299.99,
+      price: "1299.99",
       subHtml: `...`,
     },
     {
@@ -376,16 +387,17 @@ const page = () => {
       thumb: "/img/UPS/HRL1234WF2FR_product-1.jpg",
       alt: "UPS Battery",
       description: "12V 34W High Rate UPS Replacement Battery",
-      price: 89.99,
+      price: "89.99",
       subHtml: `...`,
     },
     {
       src: "/img/UPS/PSC-SOLAR-1.5KVA12V-OGM-HYBRID-SOLAR-INVERTER-1-1.webp",
-      responsive: "/img/UPS/PSC-SOLAR-1.5KVA12V-OGM-HYBRID-SOLAR-INVERTER-1-1.webp",
+      responsive:
+        "/img/UPS/PSC-SOLAR-1.5KVA12V-OGM-HYBRID-SOLAR-INVERTER-1-1.webp",
       thumb: "/img/UPS/PSC-SOLAR-1.5KVA12V-OGM-HYBRID-SOLAR-INVERTER-1-1.webp",
       alt: "Solar Inverter",
       description: "1.5KVA Hybrid Solar Inverter with MPPT Controller",
-      price: 799.99,
+      price: "799.99",
       subHtml: `...`,
     },
 
@@ -396,7 +408,7 @@ const page = () => {
       thumb: "/img/solar/lithium-battery.jpg",
       alt: "Lithium Battery",
       description: "48V 100Ah Lithium Battery for Solar Storage",
-      price: 1499.99,
+      price: "1499.99",
       subHtml: `...`,
     },
     {
@@ -405,7 +417,7 @@ const page = () => {
       thumb: "/img/solar/lithium-ion-battery.webp",
       alt: "Li-ion Battery Pack",
       description: "Modular Lithium-ion Battery Pack with BMS",
-      price: 1799.99,
+      price: "1799.99",
       subHtml: `...`,
     },
     {
@@ -414,7 +426,7 @@ const page = () => {
       thumb: "/img/solar/battery.png",
       alt: "Solar Battery",
       description: "Solar Energy Storage Battery System 10kWh",
-      price: 3999.99,
+      price: "3999.99",
       subHtml: `...`,
     },
     {
@@ -423,7 +435,7 @@ const page = () => {
       thumb: "/img/solar/solar-lifepo4-lithium-battery.jpg",
       alt: "LiFePO4 Battery",
       description: "LiFePO4 Battery 51.2V 200Ah for Solar Systems",
-      price: 2499.99,
+      price: "2499.99",
       subHtml: `...`,
     },
     {
@@ -432,7 +444,7 @@ const page = () => {
       thumb: "/img/solar/Photo-1.jpg",
       alt: "Solar Panel",
       description: "High-Efficiency Solar Panel 440W Monocrystalline",
-      price: 399.99,
+      price: "399.99",
       subHtml: `...`,
     },
     {
@@ -441,7 +453,7 @@ const page = () => {
       thumb: "/img/solar/solar-pump-new-hd.webp",
       alt: "Solar Pump",
       description: "Solar Powered Water Pump System 2HP",
-      price: 899.99,
+      price: "899.99",
       subHtml: `...`,
     },
     {
@@ -450,10 +462,10 @@ const page = () => {
       thumb: "/img/solar/solar-warer-pump-banner-mob.jpg",
       alt: "Solar Water Pump",
       description: "Complete Solar Water Pumping Solution with Controller",
-      price: 1299.99,
+      price: "1299.99",
       subHtml: `...`,
-    }
-];
+    },
+  ];
   return <Gallery images={images} />;
 };
 

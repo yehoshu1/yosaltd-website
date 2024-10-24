@@ -26,7 +26,7 @@ interface ImageItem {
   thumb: string;
   alt: string;
   description:string;
-  price:number;
+  price:string;
   subHtml: string;
 }
 
