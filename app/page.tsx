@@ -192,7 +192,7 @@ export default function Home() {
       thumb: "/img/net/Interactive Flipboard.jpg",
       alt: "Interactive Flipboards",
       description:
-        "Professional GPS Mapping System with GIS Software, Real-time Data Collection",
+        "Smart interactive digital flipboards",
       price: "4999.99",
       subHtml: `...`,
     },
@@ -202,7 +202,7 @@ export default function Home() {
       thumb: "/img/solar/led-bulbs.jpg",
       alt: "Led Bulbs",
       description:
-        "Professional GPS Mapping System with GIS Software, Real-time Data Collection",
+        "Led Bulbs of different types",
       price: "4999.99",
       subHtml: `...`,
     },
@@ -213,7 +213,7 @@ export default function Home() {
       thumb: "/img/air/Chigo Split Air Conditioner 3.5kW-12000BTU-R-32.webp",
       alt: "Chigo Split Air Conditioner 3.5kW-12000BTU-R-32",
       description:
-        "Professional GPS Mapping System with GIS Software, Real-time Data Collection",
+        "Chigo AC-12CHSD-W Inverter 3.5kw 12000Btu Wifi R32 GWP 675",
       price: "4999.99",
       subHtml: `...`,
     },

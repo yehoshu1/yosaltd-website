@@ -25,7 +25,7 @@ const Contact = () => {
                       <h4 className="text-lg font-semibold">Location:</h4>
                     </div>
                     <p className="text-gray-600 mb-2">
-                      Plot 9/82 Hardman Road, Area 9, Lilongwe
+                      Plot 9/83, Area 9, Lilongwe
                     </p>
                     <p className="text-gray-600">
                       Along Kabula-Michiru Road, Plot NO: 23, Kabula, Blantyre
@@ -67,7 +67,6 @@ const Contact = () => {
                     title="Yosa Limited Location"
                     src="https://maps.google.com/maps?q=Yosa Limited&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     className="w-full h-full"
-                    frameBorder="0"
                     allowFullScreen
                   ></iframe>
                 </div>

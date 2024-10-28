@@ -112,9 +112,9 @@ const ImageGallery: React.FC<GalleryProps> = ({
                   </p>
 
                   <div className="mt-3 flex items-end justify-between">
-                    <p className="text-lg font-bold text-blue-500">
+                    {/* <p className="text-lg font-bold text-blue-500">
                       ${image.price}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </a>

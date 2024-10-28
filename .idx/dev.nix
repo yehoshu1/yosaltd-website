@@ -12,7 +12,7 @@
     "bradlc.vscode-tailwindcss"
     "formulahendry.auto-close-tag"
     "formulahendry.auto-complete-tag"
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag" 
   ];
   idx.previews = {
     previews = {
