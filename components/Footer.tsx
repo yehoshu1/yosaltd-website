@@ -74,7 +74,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-2">Yosa Limited</h3>
             <h4 className="text-lg font-semibold mb-2">Lilongwe</h4>
             <p className="space-y-1">
-              <span className="block">Plot 9/82,</span>
+              <span className="block">Plot 9/83,</span>
               <span className="block">Area 9,</span>
               <span className="block">Lilongwe</span>
               <span className="block">Malawi</span>

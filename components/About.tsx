@@ -1,5 +1,6 @@
 import React from "react";
 import {Button} from "./ui/button";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -62,7 +63,8 @@ const About = () => {
               variant={"outline"}
               className="text-primary font-medium border-primary hover:text-primary border-2"
             >
-              Learn More
+              <Link href={"/about"}>Learn More</Link>
+                            
             </Button>
           </div>
         </div>
