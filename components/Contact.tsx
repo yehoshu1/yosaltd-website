@@ -1,5 +1,5 @@
 import React from "react";
-import {ContactForm} from "./ContactForm";
+// import {ContactForm} from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -14,8 +14,8 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Contact</h2>
         </div>
-        <div className="flex flex-col md:flex-row gap-5">
-          <div className="flex flex-wrap md:w-[60%] -mx-4">
+        <div className="flex flex-col md:flex-row w-full justify-center">
+          <div className="flex flex-wrap w-full">
             <div className="w-full px-4">
               <div className="bg-white shadow-2xl border border-blue-900/25 rounded-lg overflow-hidden">
                 <div className="flex flex-wrap">
@@ -73,7 +73,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <ContactForm />
+          {/* <ContactForm /> */}
         </div>
       </div>
     </section>
