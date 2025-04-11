@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import MyCarousel from "@/components/MyCarousel";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
+import YosaLaptopShowcase from "@/components/YosaLaptopShowcase";
 
 export type ImageItem = {
   src: string;
@@ -256,6 +257,7 @@ export default function Home() {
       <About />
       <WhyUs />
       <Services />
+      <YosaLaptopShowcase/>
       <MyCarousel />
       <Gallery images={images} />
       <Contact />
