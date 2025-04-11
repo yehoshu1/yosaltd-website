@@ -11,6 +11,22 @@ import {
 const MyCarousel = () => {
   const carImages = [
     {
+      src: "/images/meap-boxes.jpeg",
+      alt: "Green MEAP product boxes in cardboard container",
+    },
+    {
+      src: "/images/meap-warehouse.jpeg",
+      alt: "Stacked MEAP boxes in warehouse storage",
+    },
+    {
+      src: "/images/forklifts-trailer.jpeg",
+      alt: "Red HELI forklifts being transported on flatbed trailer",
+    },
+    {
+      src: "/images/forklifts-operator.jpeg",
+      alt: "Red HELI forklift with operator and assistant",
+    },
+    {
       src: "/car/raptor.png",
       alt: "Toyota Double Cab 4WD GR SPORTS",
     },
@@ -46,7 +62,6 @@ const MyCarousel = () => {
 
   return (
     <>
-      <h2 className="text-3xl font-bold my-10 text-center">Brand New 2023 Cars Available Now</h2>
       <div className="w-full max-w-4xl mx-auto px-4 flex flex-row justify-center place-items-center">
         <Carousel className="w-full max-w-md">
           <CarouselContent>
@@ -55,7 +70,7 @@ const MyCarousel = () => {
                 <Image
                   src={car.src}
                   alt={car.alt}
-                  objectFit="contain"
+                  objectFit="cover"
                   width={600}
                   height={600}
                   priority={index === 0}
