@@ -1,4 +1,4 @@
- 'use client'
+'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -7,6 +7,7 @@ interface Specification {
   icon: string;
   title: string;
   description: string;
+  detailsList?: string[];
 }
 
 const YosaLaptopShowcase: React.FC = () => {
@@ -19,14 +20,60 @@ const YosaLaptopShowcase: React.FC = () => {
   ];
 
   const specifications: Specification[] = [
-    { icon: "🔧", title: "Processor", description: "Intel® i7 1355U" },
-    { icon: "💾", title: "Memory", description: "16GB DDR4" },
-    { icon: "💽", title: "Storage", description: "1TB M.2 NVME SSD" },
-    { icon: "🖥️", title: "Display", description: '14" 1920×1080 IPS, 250 Cd/m2, 16:9' },
-    { icon: "🔋", title: "Battery", description: "11.4V/4650mAh" },
-    { icon: "📷", title: "Camera", description: "2.0M+DMIC" },
-    { icon: "📶", title: "Connectivity", description: "WIFI 802.11ac/b/g/n, 2.4G/5.0GHz" },
-    { icon: "🔌", title: "I/O Ports", description: "HDMI, USB3.0×2, USB2.0×1, Type-C USB×1, SD card slot, 3.5mm Audio, DC" }
+    { 
+      icon: "🔧", 
+      title: "Processor", 
+      description: "Intel® i7 1355U",
+      detailsList: [
+        "12 Logical Processors",
+        "10 Core",
+        "12MB L3 cache",
+        "Turbo boost up to 5 GHz"
+      ]
+    },
+    { 
+      icon: "💾", 
+      title: "Memory", 
+      description: "20GB SODIMM 2667 MT/s",
+      detailsList: [
+        "Expandable to 64GB"
+      ]
+    },
+    { 
+      icon: "🎮", 
+      title: "Graphics", 
+      description: "10GB Dedicated Graphics Memory"
+    },
+    { 
+      icon: "💽", 
+      title: "Storage", 
+      description: "1TB M.2 NVME SSD" 
+    },
+    { 
+      icon: "🖥️", 
+      title: "Display", 
+      description: '14" 1920×1080 IPS, 250 Cd/m2, 16:9' 
+    },
+    { 
+      icon: "🔋", 
+      title: "Battery", 
+      description: "11.4V/4650mAh" 
+    },
+    { 
+      icon: "📷", 
+      title: "Camera", 
+      description: "2.0M+DMIC" 
+    },
+    { 
+      icon: "📶", 
+      title: "Connectivity", 
+      description: "WIFI 802.11ac/b/g/n, 2.4G/5.0GHz" 
+    },
+    { 
+      icon: "🔌", 
+      title: "I/O Ports", 
+      description: "HDMI, USB3.0×2, USB2.0×1, Type-C USB×1, SD card slot, 3.5mm Audio, DC" 
+    }
   ];
 
   const accessories = [
@@ -113,9 +160,9 @@ const YosaLaptopShowcase: React.FC = () => {
           </div>
           
           <p className="mt-4 text-gray-600">
-            Experience exceptional performance with the YOSA L1418 laptop. Featuring an Intel i7 processor, 
-            sleek design, and comprehensive connectivity options, this ultrabook is perfect for 
-            both productivity and entertainment.
+            Experience exceptional performance with the YOSA L1418 laptop. Featuring an Intel i7 processor with 
+            10 cores and turbo boost up to 5 GHz, 10GB dedicated graphics memory, and 20GB RAM expandable to 64GB. 
+            This ultrabook delivers powerful performance in a sleek design with comprehensive connectivity options.
           </p>
           
           <div className="mt-6">
@@ -127,6 +174,13 @@ const YosaLaptopShowcase: React.FC = () => {
                   <div>
                     <h3 className="font-medium text-gray-800">{spec.title}</h3>
                     <p className="text-gray-600 text-sm">{spec.description}</p>
+                    {spec.detailsList && (
+                      <ul className="text-gray-500 text-xs mt-1 pl-3">
+                        {spec.detailsList.map((detail, detailIdx) => (
+                          <li key={detailIdx} className="list-disc ml-2">{detail}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               ))}
@@ -141,16 +195,6 @@ const YosaLaptopShowcase: React.FC = () => {
               ))}
             </ul>
           </div>
-          
-          {/* <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex-1">
-              Buy Now
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center">
-              <ZoomIn size={18} className="mr-2" />
-              View Full Specs
-            </button>
-          </div> */}
         </div>
       </div>
       
@@ -162,7 +206,15 @@ const YosaLaptopShowcase: React.FC = () => {
               <span className="text-2xl">💪</span>
             </div>
             <h3 className="font-semibold text-lg mb-2">Powerful Performance</h3>
-            <p className="text-gray-600">Intel i7 processor paired with 16GB DDR4 memory for seamless multitasking.</p>
+            <p className="text-gray-600">10-core Intel i7 processor with 5 GHz turbo boost paired with 20GB RAM for exceptional multitasking.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <span className="text-2xl">🎮</span>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Superior Graphics</h3>
+            <p className="text-gray-600">10GB dedicated graphics memory for smooth visuals and gaming performance.</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -179,14 +231,6 @@ const YosaLaptopShowcase: React.FC = () => {
             </div>
             <h3 className="font-semibold text-lg mb-2">Complete Connectivity</h3>
             <p className="text-gray-600">Comprehensive port selection including HDMI, USB-C, and SD card reader.</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <span className="text-2xl">💼</span>
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Full Package</h3>
-            <p className="text-gray-600">Comes with all essential accessories including a laptop bag and wireless mouse.</p>
           </div>
         </div>
       </div>
