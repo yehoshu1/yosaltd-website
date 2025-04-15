@@ -11,6 +11,10 @@ import {
 const MyCarousel = () => {
   const carImages = [
     {
+      src: "/images/yosaltd-bulb.jpeg",
+      alt: "A carton of a Yosa Limited Led Bulb",
+    },   
+    {
       src: "/images/meap-boxes.jpeg",
       alt: "Green MEAP product boxes in cardboard container",
     },
