@@ -22,6 +22,8 @@
     "lightgallery": "^2.7.2",
     "lucide-react": "^0.453.0",
     "next": "14.2.15",
+    "posthog-js": "^1.245.0",
+    "posthog-node": "^4.17.1",
     "prettier": "^3.3.3",
     "react": "^18",
     "react-dom": "^18",
